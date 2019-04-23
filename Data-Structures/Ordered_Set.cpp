@@ -10,7 +10,7 @@ using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statisti
 //https://codeforces.com/blog/entry/15729
 //Complexity: O(log(n))
 
-int main(){
+int main() {
     ordered_set < int >  s;
     s.insert(1); 
     s.insert(3);
