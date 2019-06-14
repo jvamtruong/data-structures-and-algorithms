@@ -2,8 +2,6 @@
 #define endl '\n'
 using namespace std;
 
-//--------------------------???--------------------------------------//
-
 int x, y, z, t;
 bool visit[100][100];
 int dx[10] = {1, 1, 2, 2, -1, -1, -2, -2};
@@ -37,19 +35,17 @@ int val(char ch) {
 }
 
 int main() {
-    //ios_base::sync_with_stdio(0);
-    //cin.tie(0);
-    int t;
-    cin >> t;
-    while (t--) {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int test;
+    cin >> test;
+    while (test--) {
         string a, b;
         cin >> a >> b;
-        //cout << a << " " << b << endl;
         x = val(a[0]);
         y = a[1] - '0';
         z = val(b[0]);
         t = b[1] - '0';
-        cout << x << " " << y  << " " << z << " " << t << endl;
         while (!q.empty()) q.pop();
         memset(visit, false, sizeof visit);
         bfs(x, y);
