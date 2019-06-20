@@ -17,7 +17,8 @@ int n, m;
 int ans = 0;
 
 int root(int x) {
-	return par[x] < 0 ? x : (par[x] = root(par[x]));
+	while (par[x] > 0) x = par[x];
+	return x;
 }
 
 void merge(int x, int y) {
